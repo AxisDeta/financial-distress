@@ -517,7 +517,7 @@ st.markdown("""
 <footer>
     <p>Financial Risk Analyzer v1.0 | Created with Streamlit | Last Updated: {}
     <br>
-    <small>© 2024 Financial Risk Analyzer. For questions or support, please contact support@riskanalyzer.com</small>
+    <small>© 2024 Financial Risk Analyzer. For questions or support, please contact axisdeta@gmail.com</small>
     </p>
 </footer>
 """.format(datetime.now().strftime("%Y-%m-%d")), unsafe_allow_html=True)

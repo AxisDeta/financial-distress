@@ -431,6 +431,26 @@ elif page == "Make Prediction":
                         </div>
                         """ % (multiclass_prediction_label, 
                                max(multiclass_proba) * 100), unsafe_allow_html=True)
+                    
+                    # Add risk mitigation suggestions
+                    st.markdown("### 💡 Risk Mitigation Suggestions")
+                    
+                    if binary_prediction == 1:  # High Risk
+                        st.warning("""
+                        Based on our analysis, here are the recommended actions:
+                        - Review and potentially restructure current borrowing arrangements
+                        - Implement stricter financial monitoring and controls
+                        - Consider building additional emergency reserves
+                        - Evaluate and adjust disaster preparedness plans
+                        """)
+                    else:  # Low Risk
+                        st.success("""
+                        While the current risk is low, consider these preventive measures:
+                        - Maintain current financial management practices
+                        - Continue regular risk assessments
+                        - Build upon existing emergency funds
+                        - Keep disaster response plans updated
+                        """)
 
                 except Exception as e:
                     st.error(f"An error occurred during prediction: {e}")

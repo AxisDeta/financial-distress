@@ -219,7 +219,16 @@ if page == "Home":
         """)
     
     with col2:
-        st.image("https://img.icons8.com/fluency/240/financial-growth.png", width=300)
+        # Using a base64 encoded SVG for reliability
+        st.markdown("""
+            <svg width="300" height="300" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 44H44" stroke="#4CAF50" stroke-width="2" stroke-linecap="round"/>
+                <path d="M4 4V44" stroke="#4CAF50" stroke-width="2" stroke-linecap="round"/>
+                <path d="M44 44V26" stroke="#4CAF50" stroke-width="2" stroke-linecap="round"/>
+                <path d="M4 35L14 25L24 35L44 15" stroke="#4CAF50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M34 15H44V25" stroke="#4CAF50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            """, unsafe_allow_html=True)
 
 elif page == "Make Prediction":
     st.title("📈 Risk Assessment Calculator")
